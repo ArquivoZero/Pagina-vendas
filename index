@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🚨 Caso Lilah Rose</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header>
+        <h1>🚨 ARQUIVO ZERO: CASO LILAH ROSE</h1>
+        <p><em>"Você foi convocado. Este não é um jogo."</em></p>
+        <p>Sou Clara, especialista em Cibercrimes. Eu e o detetive Ethan recebemos os arquivos que ninguém conseguiu decifrar. Agora é sua vez. Mostre que você tem o que é preciso para ir até o fim.</p>
+    </header>
+
+    <section class="caso">
+        <h2>🩸 O caso</h2>
+        <p>
+            Lilah Rose, 18 anos. Estudante universitária. Corpo encontrado 6 dias após desaparecimento em Jacksonville, Carolina do Norte. Causa da morte: asfixia.<br />
+            5 suspeitos. Um segredo. Nenhuma acusação.
+        </p>
+    </section>
+
+    <section class="teste-psicologico">
+        <h2>🧠 Teste psicológico do investigador</h2>
+        <form id="formTeste">
+            <div class="pergunta">
+                <label>1. Você costuma notar detalhes que os outros ignoram?</label><br />
+                <input type="radio" id="q1sim" name="q1" value="sim" required />
+                <label for="q1sim">Sim</label>
+                <input type="radio" id="q1nao" name="q1" value="nao" />
+                <label for="q1nao">Não</label>
+            </div>
+
+            <div class="pergunta">
+                <label>2. Prefere provas ou intuição?</label><br />
+                <input type="radio" id="q2provas" name="q2" value="provas" required />
+                <label for="q2provas">Provas</label>
+                <input type="radio" id="q2intuicao" name="q2" value="intuicao" />
+                <label for="q2intuicao">Intuição</label>
+            </div>
+
+            <div class="pergunta">
+                <label>3. Como você reage diante do desconhecido?</label><br />
+                <input type="radio" id="q3analisa" name="q3" value="analisa" required />
+                <label for="q3analisa">Analisa com lógica</label>
+                <input type="radio" id="q3age" name="q3" value="age" />
+                <label for="q3age">Age por impulso</label>
+            </div>
+
+            <div class="pergunta">
+                <label>4. Diante de uma mentira, o que te denuncia?</label><br />
+                <input type="radio" id="q4expressao" name="q4" value="expressao" required />
+                <label for="q4expressao">Expressão corporal</label>
+                <input type="radio" id="q4voz" name="q4" value="voz" />
+                <label for="q4voz">Tom de voz</label>
+            </div>
+
+            <div class="pergunta">
+                <label>5. Você seria capaz de acusar alguém que todos julgam inocente?</label><br />
+                <input type="radio" id="q5sim" name="q5" value="sim" required />
+                <label for="q5sim">Sim</label>
+                <input type="radio" id="q5nao" name="q5" value="nao" />
+                <label for="q5nao">Não</label>
+            </div>
+
+            <button type="button" onclick="mostrarBonus()">Próximo</button>
+        </form>
+    </section>
+
+    <section class="bonus" style="display:none;" id="bonusSection">
+        <h2>🎁 Bônus desbloqueado: Guia de Análise Corporal + Desconto</h2>
+        <p>Responda mais 2 perguntas e receba o guia exclusivo + desconto para entrar no caso oficial.</p>
+
+        <form id="formBonus">
+            <div class="pergunta">
+                <label>6. Você acredita que o corpo fala mais do que as palavras?</label><br />
+                <input type="radio" id="q6sim" name="q6" value="sim" required />
+                <label for="q6sim">Sim</label>
+                <input type="radio" id="q6nao" name="q6" value="nao" />
+                <label for="q6nao">Não</label>
+            </div>
+
+            <div class="pergunta">
+                <label>7. Quando alguém evita contato visual, você interpreta como:</label><br />
+                <input type="radio" id="q7culpa" name="q7" value="culpa" required />
+                <label for="q7culpa">Culpa</label>
+                <input type="radio" id="q7timidez" name="q7" value="timidez" />
+                <label for="q7timidez">Timidez</label>
+            </div>
+
+            <a href="#" id="botaoCheckout">
+                <button type="button">🕵️‍♂️ Quero Resolver o Caso – R$ 19,90</button>
+            </a>
+        </form>
+    </section>
+
+    <script>
+        function mostrarBonus() {
+            // Verifica se o formulário do teste está preenchido
+            const form = document.getElementById('formTeste');
+            if (form.checkValidity()) {
+                document.getElementById('bonusSection').style.display = 'block';
+                window.scrollTo(0, document.body.scrollHeight);
+            } else {
+                alert('Por favor, responda todas as perguntas para continuar.');
+            }
+        }
+    </script>
+
+</body>
+</html>
