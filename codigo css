@@ -1,0 +1,78 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff0f0;
+    color: #330000;
+    padding: 20px;
+}
+
+header, section {
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #aa0000;
+    padding-bottom: 8px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+em {
+    color: #aa0000;
+    font-weight: bold;
+}
+
+.pergunta {
+    margin-bottom: 20px;
+}
+
+.pergunta label {
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 15px;
+}
+
+button {
+    background-color: #aa0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #dd2222;
+}
+
+a#botaoCheckout {
+    text-decoration: none;
+}
+
+a#botaoCheckout button {
+    width: 100%;
+}
